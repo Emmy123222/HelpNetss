@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 
 interface ModalProps {
@@ -6,7 +6,7 @@ interface ModalProps {
 }
 // Navigate to ActiveCampaign page
 
-const Modal: React.FC<ModalProps> = ({ onClose }) => {
+const Modal: React.FC<ModalProps> = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   const handleContinue = () => {

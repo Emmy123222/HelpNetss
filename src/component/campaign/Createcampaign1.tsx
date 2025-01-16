@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import eli from "../../assets/Frame 21.png";
 import clock from "../../assets/clock.png";
 import Modal from "./Modal"; // Import the Modal component

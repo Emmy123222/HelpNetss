@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import eli from "../../assets/Frame 21.png";
 import icon from "../../assets/icon3.png";
 
@@ -11,7 +11,7 @@ interface Campaign {
 }
 
 const Creatordashboard: React.FC = () => {
-  const [campaigns, setCampaigns] = useState<Campaign[]>([
+  const [campaigns] = useState<Campaign[]>([
     {
       id: 1,
       name: "Campaign 1",
