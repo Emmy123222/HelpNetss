@@ -13,7 +13,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
       onClick={onClose} // Close modal when clicking on the background
     >
       <div
-        className="bg-white p-6 w-[435px] shadow-lg rounded-[26px] space-y-6"
+        className="bg-white p-6 w-[435px] max-w-[400px] shadow-lg rounded-[26px] space-y-6"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
       >
         <h2 className="text-xl font-bold text-center">Wallet Connect</h2>
@@ -24,7 +24,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
         </p>
         <div className="space-y-4 mt-4">
           <div
-            className="flex justify-between items-center p-3 border border-gray-300 bg-gray-100 rounded-[20px] w-[388px] h-[64px] cursor-pointer"
+            className="flex justify-between items-center p-3 border border-gray-300 bg-gray-100 rounded-[20px] w-[350px] h-[64px] cursor-pointer"
             onClick={() => navigate("/createcampaign")}
           >
             <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
               <img src={arrow} alt="" />
             </span>
           </div>
-          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[388px] h-[64px] cursor-pointer">
+          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[350px] h-[64px] cursor-pointer">
             <div className="flex items-center gap-3">
               <img src={agent} alt="Agent X" className="w-8 h-8" />
               <p className="font-medium">Agent X</p>
@@ -44,7 +44,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
               <img src={arrow} alt="" />
             </span>
           </div>
-          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[388px] h-[64px] cursor-pointer">
+          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[350px] h-[64px] cursor-pointer">
             <div className="flex items-center gap-3">
               <img
                 src={braz}

@@ -73,7 +73,7 @@ const CampaignInfo = () => {
           <h1 className="text-black text-[24px] max-sm:text-[16px]">
             <strong>Description</strong>
           </h1>
-          <div className="p-5 w-[900px] h-[150px] rounded-[26px] border border-gray-300 max-sm:w-full max-sm:h-[120px] max-sm:p-3">
+          <div className="p-5 w-[900px] h-[150px] rounded-[26px] border border-gray-300 max-sm:w-full max-sm:h-fit max-sm:p-3">
             <p className="max-sm:text-sm">
               Join us in our mission to provide art supplies to underprivileged
               schools across the country. With your support, we aim to raise
@@ -87,7 +87,7 @@ const CampaignInfo = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mt-8  max-sm:flex-col max-sm:gap-4 max-sm:mt-40">
+      <div className="flex justify-between mt-8  max-sm:flex-col max-sm:gap-4 ">
         <div
           className="w-[200px] rounded-[24px] h-[60px] bg-black flex justify-center items-center cursor-pointer max-sm:w-full"
           onClick={handleOpenPledgeModal} // Open Pledge modal
