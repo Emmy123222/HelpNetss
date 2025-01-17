@@ -7,8 +7,7 @@ import Createcampaign1 from "./component/campaign/Createcampaign1";
 import Activecampaign from "./component/campaign/Activecampaign";
 // import Landingpage from "./component/Landingpage";
 import CampaignInfo from "./component/campaign/CampaignInfo";
-import Plegde from "./component/campaign/Plegde";
-import Unpledge from "./component/campaign/Unpledge";
+
 import Creatordashboard from "./component/campaign/Creatordashboard";
 
 function App() {
@@ -31,8 +30,6 @@ function App() {
         <Route path="/createcampaign" element={<Createcampaign />} />
         <Route path="/activecampaign" element={<Activecampaign />} />
         <Route path="/campaigninfo" element={<CampaignInfo />} />
-        <Route path="/pledge" element={<Plegde />} />
-        <Route path="/unpledge" element={<Unpledge />} />
       </Routes>
     </div>
   );

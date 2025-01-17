@@ -6,26 +6,27 @@ import Progressbar from "./Progressbar";
 
 const Explore1 = () => {
   return (
-    <div className="space-y-6">
-      <div className="flex gap-4 justify-center items-center min-h-screen ">
-        <div>
-          <div className="bg-black w-[438px] h-[668px] rounded-[26px] p-9 flex items-center   flex-col">
-            <div className="mt-3">
-              <h2 className="text-white text-[32px]">
+    <div className="space-y-6 max-sm:space-y-4 ">
+      <div className="flex gap-4 justify-center items-center min-h-screen max-sm:flex-col max-sm:gap-6">
+        {/* First Campaign Card */}
+        <div className="max-sm:w-full">
+          <div className="bg-black w-[438px] h-[668px] rounded-[26px] p-9 flex items-center flex-col max-sm:w-full max-sm:h-auto max-sm:p-6">
+            <div className="mt-3 max-sm:mt-0">
+              <h2 className="text-white text-[32px] max-sm:text-[24px] text-center">
                 <strong>Charity Gala</strong>
               </h2>
-              <img src={imgs} alt="" />
+              <img src={imgs} alt="" className="max-sm:w-full max-sm:mt-4" />
               <div>
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between mt-4 max-sm:mt-2 max-sm:flex-col max-sm:gap-2">
                   <span className="flex items-center gap-3">
-                    <img src={image} alt="" />{" "}
-                    <p className="text-white">
-                      <strong>Books For Bright Futures"</strong>
+                    <img src={image} alt="" className="max-sm:w-8" />
+                    <p className="text-white text-[16px] max-sm:text-[14px]">
+                      <strong>Books For Bright Futures</strong>
                     </p>
                   </span>
-                  <img src={imag} alt="" />
+                  <img src={imag} alt="" className="max-sm:w-8" />
                 </div>
-                <p className="text-white text-[16px]">
+                <p className="text-white text-[16px] max-sm:text-[14px] mt-4">
                   Access to education is a fundamental right, yet millions of
                   children around the world lack the resources they need to
                   succeed. The "Books for Bright Futures" campaign seeks to
@@ -35,28 +36,30 @@ const Explore1 = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center  ">
+          <div className="flex justify-center items-center mt-4 max-sm:mt-2">
             <Progressbar total={100} raised={30} supporters={30} daysLeft={5} />
           </div>
         </div>
-        <div>
-          <div className="bg-black w-[438px] h-[668px] rounded-[26px] p-9 flex items-center justify-center flex-col ">
-            <div className="mt-4">
-              <h2 className="text-white text-[32px]">
+
+        {/* Second Campaign Card */}
+        <div className="max-sm:w-full">
+          <div className="bg-black w-[438px] h-[668px] rounded-[26px] p-9 flex items-center flex-col max-sm:w-full max-sm:h-auto max-sm:p-6">
+            <div className="mt-4 max-sm:mt-0">
+              <h2 className="text-white text-[32px] max-sm:text-[24px] text-center">
                 <strong>Homeless</strong>
               </h2>
-              <img src={img} alt="" className="flex justify-center" />
+              <img src={img} alt="" className="max-sm:w-full max-sm:mt-4" />
               <div>
-                <div className="flex justify-between mt-11">
+                <div className="flex justify-between mt-11 max-sm:mt-4 max-sm:flex-col max-sm:gap-2">
                   <span className="flex items-center gap-3">
-                    <img src={image} alt="" />{" "}
-                    <p className="text-white">
+                    <img src={image} alt="" className="max-sm:w-8" />
+                    <p className="text-white text-[16px] max-sm:text-[14px]">
                       <strong>Home For All</strong>
                     </p>
                   </span>
-                  <img src={imag} alt="" />
+                  <img src={imag} alt="" className="max-sm:w-8" />
                 </div>
-                <p className="text-white text-[16px]">
+                <p className="text-white text-[16px] max-sm:text-[14px] mt-4">
                    Every night, thousands of individuals and families in our
                   community find themselves without a place to call home. The
                   "Home for All" campaign aims to raise funds to provide
@@ -66,7 +69,7 @@ const Explore1 = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center  ">
+          <div className="flex justify-center items-center mt-4 max-sm:mt-2">
             <Progressbar
               total={100}
               raised={20}

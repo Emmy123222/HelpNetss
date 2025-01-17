@@ -15,22 +15,32 @@ const Landingpage = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-between">
       {/* Main Content */}
-      <div className="flex flex-col justify-center items-center space-y-8">
-        <h1 className="text-2xl font-bold text-center">
+      <div className="flex flex-col justify-center items-center space-y-8 px-4 max-sm:space-y-6">
+        <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:text-lg max-sm:leading-6">
           Revolutionizing Humanitarian Aid With Blockchain Transparency
         </h1>
-        <div className="flex gap-3">
-          <img src={frame} alt="Frame" className="w-[507px] h-[552px]" />
-          <div>
-            <img src={fram} alt="Fram" />
-            <div className="flex justify-center mt-10">
+        <div className="flex flex-col md:flex-row md:gap-3 items-center max-sm:gap-6">
+          <img
+            src={frame}
+            alt="Frame"
+            className="w-full max-w-sm h-auto md:w-[507px] md:h-[552px]"
+          />
+          <div className="flex flex-col items-center max-sm:space-y-4">
+            <img
+              src={fram}
+              alt="Fram"
+              className="w-full max-w-sm h-auto md:max-w-none"
+            />
+            <div className="flex justify-center mt-6">
               <button
                 onClick={handleModalToggle}
-                className="w-[300px] h-[50px] flex gap-3 justify-center items-center bg-black"
+                className="w-full max-w-xs h-[50px] flex gap-3 justify-center items-center bg-black max-sm:py-3"
               >
-                <p className="text-white text-[20px]">Connect Wallet</p>
+                <p className="text-white text-lg md:text-[20px]">
+                  Connect Wallet
+                </p>
                 <img src={img} alt="Icon" className="w-[20px] h-[20px]" />
               </button>
             </div>
@@ -42,22 +52,36 @@ const Landingpage = () => {
       <Walletmodal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Footer */}
-      <div className="flex justify-between p-4 mt-24 border border-black">
+      <div className="flex flex-col md:flex-row justify-between items-center p-4 mt-16 border-t border-black max-sm:space-y-4 md:space-y-0">
         <div className="flex gap-2 items-center">
-          <img src={eli} alt="HelpNet" />
-          <p className="text-2xl font-bold">HelpNet</p>
+          <img
+            src={eli}
+            alt="HelpNet"
+            className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+          />
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+            HelpNet
+          </p>
         </div>
         <div className="flex gap-2 items-center">
           <img
             src={down}
             alt="Starkner Blockchain"
-            className="w-[40px] h-[40px]"
+            className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-2xl font-bold">Starkner Blockchain</p>
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+            Starkner Blockchain
+          </p>
         </div>
         <div className="flex gap-2 items-center">
-          <img src={downs} alt="Cairo" className="w-[40px] h-[40px]" />
-          <p className="text-2xl font-bold">Cairo</p>
+          <img
+            src={downs}
+            alt="Cairo"
+            className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+          />
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+            Cairo
+          </p>
         </div>
       </div>
     </div>
