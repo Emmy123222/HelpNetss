@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white text-black ">
+    <nav className="bg-black text-white ">
       <div className="px-4 max-sm:px-2">
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
@@ -20,12 +20,12 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="flex max-sm:hidden space-x-8">
-            <div className="text-black px-3 py-2 rounded-md text-sm font-medium text-[20px]">
+            <p className=" px-3 py-2 rounded-md  font-medium text-[24px] text-white">
               About Us
-            </div>
-            <div className="text-black px-3 py-2 rounded-md text-sm font-medium text-[20px]">
+            </p>
+            <p className=" px-3 py-2 rounded-md  font-medium text-[24px] text-white">
               Teams
-            </div>
+            </p>
           </div>
 
           {/* Hamburger Menu */}

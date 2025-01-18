@@ -26,7 +26,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
         </p>
         <div className="space-y-4 mt-4">
           <div
-            className="flex justify-between items-center p-3 border border-gray-300 bg-gray-100 rounded-[20px] w-[350px] h-[64px] cursor-pointer max-sm:w-full"
+            className="flex justify-between items-center p-3 border border-gray-300 bg-gray-100 rounded-[20px] w-full h-[64px] cursor-pointer max-sm:w-full"
             onClick={() => navigate("/createcampaign")}
           >
             <div className="flex items-center gap-3">
@@ -37,7 +37,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
               <img src={arrow} alt="" />
             </span>
           </div>
-          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[350px] h-[64px] cursor-pointer max-sm:w-full">
+          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-full h-[64px] cursor-pointer max-sm:w-full">
             <div className="flex items-center gap-3">
               <img src={agent} alt="Agent X" className="w-8 h-8" />
               <p className="font-medium text-black">Agent X</p>
@@ -46,7 +46,7 @@ const Walletmodal = ({ isOpen, onClose }: any) => {
               <img src={arrow} alt="" />
             </span>
           </div>
-          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-[350px] h-[64px] cursor-pointer max-sm:w-full ">
+          <div className="flex justify-between items-center p-3 bg-gray-100 border border-gray-300 rounded-[20px] w-full h-[64px] cursor-pointer max-sm:w-full ">
             <div className="flex items-center gap-3">
               <img
                 src={braz}

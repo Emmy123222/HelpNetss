@@ -28,11 +28,15 @@ const Landingpage = () => {
             className="w-full max-w-sm h-auto md:w-[507px] md:h-[552px]"
           />
           <div className="flex flex-col items-center max-sm:space-y-4">
-            <img
-              src={fram}
-              alt="Fram"
-              className="w-full max-w-sm h-auto md:max-w-none"
-            />
+            <div className="w-[600px] h-[500px] border-b-8 border-black rounded-[26px] p-7">
+              <p className="text-black text-[30px]">
+                Imagine a world where every donation counts, and every dollar
+                makes a tangible difference. A world where transparency and
+                trust are the foundation of Humanitarian aid. welcome to
+                HELPNET, a pioneering blockchain-based crowdfunding platform
+                that’s changing the face of giving.
+              </p>
+            </div>
             <div className="flex justify-center mt-6">
               <button
                 onClick={handleModalToggle}
@@ -52,14 +56,14 @@ const Landingpage = () => {
       <Walletmodal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Footer */}
-      <div className="flex flex-col md:flex-row justify-between items-center p-4 mt-16 border-t border-black max-sm:space-y-4 md:space-y-0">
+      <div className="flex bg-black  flex-col md:flex-row justify-between items-center p-4 mt-16 border-t border-black max-sm:space-y-4 md:space-y-0">
         <div className="flex gap-2 items-center">
           <img
             src={eli}
             alt="HelpNet"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-white">
             HelpNet
           </p>
         </div>
@@ -69,7 +73,7 @@ const Landingpage = () => {
             alt="Starkner Blockchain"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-white">
             Starkner Blockchain
           </p>
         </div>
@@ -79,7 +83,7 @@ const Landingpage = () => {
             alt="Cairo"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-white">
             Cairo
           </p>
         </div>
