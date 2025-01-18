@@ -14,7 +14,7 @@ const Createcampaign = () => {
   };
 
   return (
-    <div>
+    <div className="">
       {/* Header */}
       <div className="bg-pink-100 p-5 flex justify-between items-center  max-sm:gap-4 max-sm:overflow-x-hidden">
         <div className="flex gap-3 items-center max-sm:justify-center">
@@ -45,7 +45,7 @@ const Createcampaign = () => {
         <div className="hidden max-sm:flex">
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none"
+            className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none bg-white"
           >
             <svg
               className="h-6 w-6"
@@ -96,7 +96,7 @@ const Createcampaign = () => {
       )}
 
       {/* Content */}
-      <div className="p-5 space-y-4 max-sm:p-3">
+      <div className="p-5 space-y-4 max-sm:p-3 bg-white">
         <div className="flex gap-8 mt-5 max-sm:flex-col max-sm:gap-4 max-sm:items-center">
           <img src={img} alt="" className="w-[800px] max-sm:w-full" />
           <img src={imgs} alt="" className="w-[800px] max-sm:w-full" />

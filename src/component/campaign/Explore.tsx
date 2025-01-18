@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 const Explore = () => {
   return (
-    <div className="space-y-6 max-sm:space-y-4 max-sm:p-4">
+    <div className="space-y-6 max-sm:space-y-4 max-sm:p-4 bg-white">
       <div className="flex gap-4 justify-center items-center min-h-screen max-sm:flex-col max-sm:gap-6">
         {/* First Campaign Card */}
         <div className="max-sm:w-full">

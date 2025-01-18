@@ -15,10 +15,10 @@ const Landingpage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col justify-between bg-white">
       {/* Main Content */}
       <div className="flex flex-col justify-center items-center space-y-8 px-4 max-sm:space-y-6">
-        <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:text-lg max-sm:leading-6">
+        <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:text-lg max-sm:leading-6 text-black">
           Revolutionizing Humanitarian Aid With Blockchain Transparency
         </h1>
         <div className="flex flex-col md:flex-row md:gap-3 items-center max-sm:gap-6">
@@ -59,7 +59,7 @@ const Landingpage = () => {
             alt="HelpNet"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
             HelpNet
           </p>
         </div>
@@ -69,7 +69,7 @@ const Landingpage = () => {
             alt="Starkner Blockchain"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
             Starkner Blockchain
           </p>
         </div>
@@ -79,7 +79,7 @@ const Landingpage = () => {
             alt="Cairo"
             className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
           />
-          <p className="text-lg md:text-2xl font-bold max-sm:text-base">
+          <p className="text-lg md:text-2xl font-bold max-sm:text-base text-black">
             Cairo
           </p>
         </div>

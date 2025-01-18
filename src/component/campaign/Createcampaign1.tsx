@@ -15,7 +15,7 @@ const CreateCampaign1: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-white">
       {/* Header */}
       <div className="w-full h-[120px] bg-[#D9D9D9BA] flex justify-between items-center p-5  max-sm:h-auto max-sm:gap-4">
         <div className="flex gap-3 items-center justify-center">
@@ -71,14 +71,14 @@ const CreateCampaign1: React.FC = () => {
         <div className="flex container mx-auto gap-4 mt-8 justify-between max-sm:flex-col max-sm:gap-4 max-sm:p-5">
           <div className="flex gap-4 max-sm:flex-col max-sm:gap-2">
             <div>
-              <p className="max-sm:text-sm">Initial balance</p>
+              <p className="max-sm:text-sm text-black">Initial balance</p>
               <input
                 type="text"
                 className="w-[120px] h-[52px] bg-[#F5F5F5] border rounded-[20px] border-black p-5 max-sm:w-full max-sm:h-10"
               />
             </div>
             <div>
-              <p className="max-sm:text-sm">Target balance</p>
+              <p className="max-sm:text-sm text-black">Target balance</p>
               <input
                 type="text"
                 className="w-[120px] h-[52px] rounded-[20px] bg-[#F5F5F5] border border-black p-5 max-sm:w-full max-sm:h-10"

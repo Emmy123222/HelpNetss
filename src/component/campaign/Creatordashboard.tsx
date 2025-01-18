@@ -141,7 +141,7 @@ const Creatordashboard: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white">
       <div className="bg-[#D9D9D9BA] p-5 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="flex gap-3 items-center">
           <img src={eli} alt="" className="w-[40px] sm:w-[50px]" />
@@ -161,28 +161,28 @@ const Creatordashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gray-50 p-5 flex flex-col items-center max-sm:mt-24">
-        <h1 className="text-lg sm:text-2xl font-bold mb-5 text-center">
+      <div className=" bg-gray-50 p-5 flex flex-col items-center max-sm:mt-24 mx-auto ">
+        <h1 className="text-lg sm:text-2xl font-bold mb-5 text-center text-black">
           Campaign Management Board
         </h1>
 
-        <div className="w-full overflow-x-auto">
+        <div className="w-full mx-UT overflow-x-auto">
           <table className="w-full min-w-[600px] sm:min-w-[800px] bg-white shadow-lg rounded-lg border-collapse ">
             <thead>
               <tr className="bg-gray-100">
-                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold">
+                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold text-black">
                   Campaign Name
                 </th>
-                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold">
+                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold text-black">
                   Initial Amount
                 </th>
-                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold">
+                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold text-black">
                   Target Amount
                 </th>
-                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold">
+                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold text-black">
                   Description
                 </th>
-                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold">
+                <th className="p-2 sm:p-3 text-left text-xs sm:text-sm font-semibold text-black">
                   Withdraw
                 </th>
               </tr>
@@ -193,16 +193,16 @@ const Creatordashboard: React.FC = () => {
                   key={campaign.id}
                   className="border-b hover:bg-gray-50 transition"
                 >
-                  <td className="p-2 sm:p-3 text-xs sm:text-sm">
+                  <td className="p-2 sm:p-3 text-xs sm:text-sm text-black">
                     {campaign.name}
                   </td>
-                  <td className="p-2 sm:p-3 text-xs sm:text-sm">
+                  <td className="p-2 sm:p-3 text-xs sm:text-sm text-black">
                     {campaign.initialAmount}
                   </td>
-                  <td className="p-2 sm:p-3 text-xs sm:text-sm">
+                  <td className="p-2 sm:p-3 text-xs sm:text-sm text-black">
                     {campaign.targetAmount}
                   </td>
-                  <td className="p-2 sm:p-3 text-xs sm:text-sm">
+                  <td className="p-2 sm:p-3 text-xs sm:text-sm text-black">
                     {campaign.description}
                   </td>
                   <td className="p-2 sm:p-3">
@@ -220,8 +220,10 @@ const Creatordashboard: React.FC = () => {
         </div>
 
         <div className="mt-5 bg-gray-100 p-4 sm:p-5 rounded-lg w-full max-w-md text-center shadow-md">
-          <h2 className="text-lg sm:text-xl font-bold">Total Amount</h2>
-          <p className="text-xl sm:text-3xl font-semibold text-gray-800">
+          <h2 className="text-lg sm:text-xl font-bold text-black">
+            Total Amount
+          </h2>
+          <p className="text-xl sm:text-3xl font-semibold text-black">
             ${totalAmount.toLocaleString("en-US", { minimumFractionDigits: 2 })}
           </p>
           <button
@@ -235,14 +237,14 @@ const Creatordashboard: React.FC = () => {
         {isModalVisible && selectedCampaign && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center ">
             <div className="bg-white p-4 sm:p-6 rounded-[26px] w-[90%] sm:w-96">
-              <h2 className="text-lg sm:text-xl font-bold mb-4">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 text-black">
                 Withdraw from {selectedCampaign.name}
               </h2>
-              <p className="mb-4 text-sm sm:text-base">
+              <p className="mb-4 text-sm sm:text-base text-black">
                 Maximum Withdrawable Amount:{" "}
                 <strong>{selectedCampaign.initialAmount}</strong>
               </p>
-              <label className="block mb-2 font-semibold text-sm sm:text-base">
+              <label className="block mb-2 font-semibold text-sm sm:text-base text-black">
                 Wallet Address
               </label>
               <input
@@ -250,9 +252,9 @@ const Creatordashboard: React.FC = () => {
                 placeholder="Enter wallet address"
                 value={walletAddress}
                 onChange={(e) => setWalletAddress(e.target.value)}
-                className="w-full p-2 border rounded mb-4 text-sm sm:text-base"
+                className="w-full p-2 border  mb-4 text-sm sm:text-base bg-gray-300 rounded-[26px] text-black"
               />
-              <label className="block mb-2 font-semibold text-sm sm:text-base">
+              <label className="block mb-2 font-semibold text-sm sm:text-base text-black">
                 Enter Amount
               </label>
               <input
@@ -260,7 +262,7 @@ const Creatordashboard: React.FC = () => {
                 placeholder="Enter amount"
                 value={withdrawAmount}
                 onChange={(e) => setWithdrawAmount(e.target.value)}
-                className="w-full p-2 border rounded mb-4 text-sm sm:text-base"
+                className="w-full p-2 border mb-4 text-sm sm:text-base bg-gray-300 rounded-[26px] text-black"
               />
               <button
                 onClick={handleWithdraw}
@@ -281,10 +283,10 @@ const Creatordashboard: React.FC = () => {
         {isTotalModalVisible && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center ">
             <div className="bg-white p-4 sm:p-6  w-[90%] sm:w-96 rounded-[26px]">
-              <h2 className="text-lg sm:text-xl font-bold mb-4">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 text-black">
                 Withdraw Total Earnings
               </h2>
-              <p className="mb-4 text-sm sm:text-base">
+              <p className="mb-4 text-sm sm:text-base text-black">
                 Maximum Withdrawable Amount:{" "}
                 <strong>
                   $
@@ -293,7 +295,7 @@ const Creatordashboard: React.FC = () => {
                   })}
                 </strong>
               </p>
-              <label className="block mb-2 font-semibold text-sm sm:text-base">
+              <label className="block mb-2 font-semibold text-sm sm:text-base text-black">
                 Wallet Address
               </label>
               <input
@@ -301,9 +303,9 @@ const Creatordashboard: React.FC = () => {
                 placeholder="Enter wallet address"
                 value={walletAddress}
                 onChange={(e) => setWalletAddress(e.target.value)}
-                className="w-full p-2 border rounded mb-4 text-sm sm:text-base"
+                className="w-full p-2 border bg-gray-300 mb-4 text-sm sm:text-base text-black rounded-[26px]"
               />
-              <label className="block mb-2 font-semibold text-sm sm:text-base">
+              <label className="block mb-2 font-semibold text-sm sm:text-base text-black">
                 Enter Amount
               </label>
               <input
@@ -311,7 +313,7 @@ const Creatordashboard: React.FC = () => {
                 placeholder="Enter amount"
                 value={withdrawAmount}
                 onChange={(e) => setWithdrawAmount(e.target.value)}
-                className="w-full p-2 border rounded mb-4 text-sm sm:text-base"
+                className="w-full p-2 border bg-gray-300 mb-4 text-sm sm:text-base text-black rounded-[26px]"
               />
               <button
                 onClick={handleWithdrawTotal}

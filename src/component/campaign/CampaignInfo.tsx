@@ -22,59 +22,59 @@ const CampaignInfo = () => {
     setIsUnPledgeModalOpen(false);
   };
   return (
-    <div className="container mx-auto min-h-screen p-5 w-[900px] max-sm:w-full max-sm:flex max-sm:flex-col">
+    <div className="container mx-auto min-h-screen p-5 w-[900px] max-sm:w-full max-sm:flex max-sm:flex-col bg-white">
       <div className="flex flex-col justify-center items-center mt-10 max-sm:mt-5">
         <h1 className="font-medium text-[24px] text-black max-sm:text-[18px]">
           <strong>Campaign Info</strong>
         </h1>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="p-5 max-sm:p-2">
+      <div className="flex flex-col justify-center items-center max-sm:mx-auto  max-sm:w-full">
+        <div className="p-5 max-sm:p-2 space-y-3">
           <h1 className="text-black text-[20px] max-sm:text-[16px]">
             <strong>Creator Name</strong>
           </h1>
           <input
             type="text"
             placeholder="Name..."
-            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[350px] max-sm:h-[60px] max-sm:p-3"
+            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[300px] max-sm:h-[60px] max-sm:p-3 bg-white"
           />
         </div>
-        <div className="p-5 max-sm:p-2">
+        <div className="p-5 max-sm:p-2 space-y-3">
           <h1 className="text-black text-[20px] max-sm:text-[16px]">
             <strong>Current Balance</strong>
           </h1>
           <input
             type="text"
             placeholder="Price..."
-            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[350px] max-sm:h-[60px] max-sm:p-3"
+            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[300px] max-sm:h-[60px] max-sm:p-3 bg-white"
           />
         </div>
-        <div className="p-5 max-sm:p-2">
+        <div className="p-5 max-sm:p-2 space-y-3">
           <h1 className="text-black text-[20px] max-sm:text-[16px]">
             <strong>Target</strong>
           </h1>
           <input
             type="text"
             placeholder="Price..."
-            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[350px] max-sm:h-[60px] max-sm:p-3"
+            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[300px] max-sm:h-[60px] max-sm:p-3 bg-white"
           />
         </div>
-        <div className="p-5 max-sm:p-2">
+        <div className="p-5 max-sm:p-2 space-y-3">
           <h1 className="text-black text-[24px] max-sm:text-[16px]">
             <strong>Deadline</strong>
           </h1>
           <input
             type="text"
             placeholder="Data..."
-            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[350px] max-sm:h-[60px] max-sm:p-3"
+            className="w-[900px] h-[80px] p-5 rounded-[26px] border border-gray-300 max-sm:w-[300px] max-sm:h-[60px] max-sm:p-3 bg-white"
           />
         </div>
-        <div className="max-sm:mt-4">
+        <div className="max-sm:mt-4 space-y-3">
           <h1 className="text-black text-[24px] max-sm:text-[16px]">
             <strong>Description</strong>
           </h1>
           <div className="p-5 w-[900px] h-[150px] rounded-[26px] border border-gray-300 max-sm:w-full max-sm:h-fit max-sm:p-3">
-            <p className="max-sm:text-sm">
+            <p className="max-sm:text-sm text-black">
               Join us in our mission to provide art supplies to underprivileged
               schools across the country. With your support, we aim to raise
               $10,000 to purchase and distribute high-quality art materials to

@@ -40,18 +40,18 @@ const Unpledge: React.FC<PledgeProps> = ({ onClose }) => {
         >
           <input
             type="text"
-            placeholder="Pledge Name"
+            placeholder="Upledge Name"
             value={unPledgeName}
             onChange={(e) => setUnPledgeName(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black"
+            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black text-black bg-white"
             required
           />
           <input
             type="number"
-            placeholder="Pledge Amount"
+            placeholder="Unpledge Amount"
             value={unPledgeAmount}
             onChange={(e) => setUnPledgeAmount(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black"
+            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black text-black bg-white"
             required
             min={1}
           />
@@ -59,7 +59,7 @@ const Unpledge: React.FC<PledgeProps> = ({ onClose }) => {
             type="submit"
             className="bg-black text-white py-3 rounded-[26px] hover:bg-gray-800 transition duration-200"
           >
-            Pledge
+            Unpledge
           </button>
         </form>
       </div>

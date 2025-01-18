@@ -41,7 +41,7 @@ const Pledge: React.FC<PledgeProps> = ({ onClose }) => {
             placeholder="Pledge Name"
             value={pledgeName}
             onChange={(e) => setPledgeName(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black"
+            className="w-full bg-white border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black text-black"
             required
           />
           <input
@@ -49,7 +49,7 @@ const Pledge: React.FC<PledgeProps> = ({ onClose }) => {
             placeholder="Pledge Amount"
             value={pledgeAmount}
             onChange={(e) => setPledgeAmount(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black"
+            className="w-full bg-white border border-gray-300 p-3 rounded-[26px] focus:outline-none focus:ring focus:ring-black text-black"
             required
             min={1}
           />

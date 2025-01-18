@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           <div className="hidden max-sm:flex">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none bg-white"
             >
               <svg
                 className="h-6 w-6"
