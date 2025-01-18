@@ -43,26 +43,26 @@ const CreateCampaign1: React.FC = () => {
         </div>
         <div className="container mx-auto space-y-12 max-sm:space-y-6 max-sm:p-4">
           <div className="space-y-3">
-            <p className="max-sm:text-sm">Campaign Name</p>
+            <p className="max-sm:text-sm text-black">Campaign Name</p>
             <input
               type="text"
-              placeholder="Enter text"
+              placeholder="Campaign Name"
               className="w-full bg-gray-200 h-12 px-4 text-black placeholder-gray-500 outline-none rounded-[20px] max-sm:h-10 max-sm:text-sm"
             />
           </div>
           <div className="space-y-3">
-            <p className="max-sm:text-sm">Campaign Title</p>
+            <p className="max-sm:text-sm text-black">Campaign Title</p>
             <input
               type="text"
-              placeholder="Enter text"
+              placeholder="Campaign Title"
               className="w-full bg-gray-200 h-12 px-4 text-black placeholder-gray-500 outline-none rounded-[20px] max-sm:h-10 max-sm:text-sm"
             />
           </div>
           <div className="space-y-3">
-            <p className="max-sm:text-sm">Campaign Description</p>
+            <p className="max-sm:text-sm text-black">Campaign Description</p>
             <input
               type="text"
-              placeholder="Enter text"
+              placeholder="Campaign Description"
               className="w-full bg-gray-200 h-[100px] px-4 text-black placeholder-gray-500 outline-none rounded-[20px] max-sm:h-[80px] max-sm:text-sm"
             />
           </div>
@@ -74,14 +74,14 @@ const CreateCampaign1: React.FC = () => {
               <p className="max-sm:text-sm text-black">Initial balance</p>
               <input
                 type="text"
-                className="w-[120px] h-[52px] bg-[#F5F5F5] border rounded-[20px] border-black p-5 max-sm:w-full max-sm:h-10"
+                className="w-[120px] text-black h-[52px] bg-[#F5F5F5] border rounded-[20px] border-black p-5 max-sm:w-full max-sm:h-10"
               />
             </div>
             <div>
               <p className="max-sm:text-sm text-black">Target balance</p>
               <input
                 type="text"
-                className="w-[120px] h-[52px] rounded-[20px] bg-[#F5F5F5] border border-black p-5 max-sm:w-full max-sm:h-10"
+                className="w-[120px] h-[52px] text-black rounded-[20px] bg-[#F5F5F5] border border-black p-5 max-sm:w-full max-sm:h-10"
               />
             </div>
           </div>

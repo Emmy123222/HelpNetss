@@ -16,7 +16,7 @@ const Createcampaign = () => {
   return (
     <div className="">
       {/* Header */}
-      <div className="bg-pink-100 p-5 flex justify-between items-center  max-sm:gap-4 max-sm:overflow-x-hidden">
+      <div className="bg-black p-5 flex justify-between items-center  max-sm:gap-4 max-sm:overflow-x-hidden">
         <div className="flex gap-3 items-center max-sm:justify-center">
           <img src={eli} alt="" className="w-[50px] max-sm:w-[40px]" />
           <h1 className="font-medium text-[24px] max-sm:text-[20px]">
@@ -76,7 +76,7 @@ const Createcampaign = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="max-sm:block bg-pink-100 w-full flex flex-col items-center gap-4 p-4  max-sm:space-y-3">
+        <div className="max-sm:block bg-black w-full flex flex-col items-center gap-4 p-4  max-sm:space-y-3">
           <button
             className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full"
             onClick={() => navigate("/createcampaign1")}

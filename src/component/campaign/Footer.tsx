@@ -6,9 +6,9 @@ import copy from "../../assets/copy.png";
 
 const Footer = () => {
   return (
-    <div className="bg-pink-100 p-16 w-full h-[400px] mt-24 flex flex-col max-sm:p-6 max-sm:h-auto max-sm:mt-12">
+    <div className="bg-black p-16 w-full h-[400px] mt-24 flex flex-col max-sm:p-6 max-sm:h-auto max-sm:mt-12">
       <div>
-        <h1 className="text-2xl text-black font-bold text-center max-sm:text-xl">
+        <h1 className="text-2xl text-white font-bold text-center max-sm:text-xl">
           Revolutionizing Humanitarian Aid With Blockchain Transparency
         </h1>
         <div className="flex items-center justify-center mt-8 max-sm:flex-col max-sm:mt-6 max-sm:gap-4">
@@ -17,14 +17,14 @@ const Footer = () => {
             alt=""
             className="w-[168px] h-[146px] max-sm:w-[120px] max-sm:h-[100px]"
           />
-          <h1 className="text-[96px] font-bold text-center text-black max-sm:text-[40px]">
+          <h1 className="text-[96px] font-bold text-center text-white  max-sm:text-[40px]">
             <strong>HelpNet</strong>
           </h1>
         </div>
         <div className="flex justify-between items-center mt-8 max-sm:flex-col max-sm:gap-6">
           {/* Follow Us Section */}
           <div className="max-sm:text-center">
-            <p className="text-[20px] text-black max-sm:text-[16px]">
+            <p className="text-[20px] text-white  max-sm:text-[16px]">
               Follow us
             </p>
             <div className="flex gap-2 justify-center mt-2">
@@ -40,7 +40,7 @@ const Footer = () => {
               alt=""
               className="max-sm:w-6 max-sm:h-6 max-sm:mb-2"
             />
-            <p className="text-black text-[16px] max-sm:text-sm">
+            <p className="text-white  text-[16px] max-sm:text-sm">
               @2025 HelpNet All Right Reserved
             </p>
           </div>

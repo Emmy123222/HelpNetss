@@ -84,7 +84,7 @@ const Explore = () => {
         </div>
       </div>
 
-      <div className="bg-pink-100 w-full h-[68px] rounded-[24px] max-sm:h-[50px]"></div>
+      <div className="bg-black w-full h-[68px] rounded-[24px] max-sm:h-[50px]"></div>
       <Explore1 />
       <div className="flex justify-center">
         <div className="w-[370px] h-[39px] text-white bg-black rounded-full flex justify-center items-center">
