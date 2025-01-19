@@ -13,15 +13,14 @@ const Explore = () => {
               <h2 className="text-white text-[32px] max-sm:text-[24px] text-center">
                 <strong>The Ocean Cleanup</strong>
               </h2>
-
               <div>
                 <div className="flex justify-between mt-4 max-sm:mt-2 max-sm:flex-col max-sm:gap-2">
-                  <span className=" items-center gap-3">
+                  <span className="flex items-center gap-3">
                     <p className="text-white text-[16px] max-sm:text-[14px]">
                       <strong>Wallet Address</strong>
-                    </p>
-                    <p className="max-w-[200px] truncate text-white">
-                      0x9876543210FEDCBA9876543210fedcba98765432
+                      <p className=" max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
+                        0xF2A6B7D4935D1aD78172C9b5fD4556C45d123456
+                      </p>
                     </p>
                   </span>
                 </div>
@@ -41,20 +40,19 @@ const Explore = () => {
 
         {/* Second Campaign Card */}
         <div className="max-sm:w-full">
-          <div className="bg-black w-[438px] h-[350px] rounded-[26px] p-9 flex items-center justify-center flex-col max-sm:w-full max-sm:h-auto max-sm:p-6">
+          <div className="bg-black w-[438px] h-[350px] rounded-[26px] p-9 flex items-center flex-col max-sm:w-full max-sm:h-auto max-sm:p-6">
             <div className="mt-4 max-sm:mt-0">
               <h2 className="text-white text-[32px] max-sm:text-[24px] text-center">
                 <strong>Real Beauty</strong>
               </h2>
-
               <div>
-                <div className=" mt-11 max-sm:mt-4 max-sm:flex-col max-sm:gap-2">
-                  <span className=" gap-3">
+                <div className="flex justify-between mt-4 max-sm:mt-4 max-sm:flex-col max-sm:gap-2">
+                  <span className="flex items-center gap-3">
                     <p className="text-white text-[16px] max-sm:text-[14px]">
                       <strong>Wallet Address</strong>
-                    </p>
-                    <p className="max-w-[200px] truncate text-white">
-                      0x9876543210FEDCBA9876543210fedcba98765432
+                      <p className="max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
+                        0xA1b2C3D4E5F6789012345678901234567890ABCD
+                      </p>
                     </p>
                   </span>
                 </div>
@@ -78,13 +76,18 @@ const Explore = () => {
         </div>
       </div>
 
+      {/* Highlight Bar */}
       <div className="bg-black w-full h-[68px] rounded-[24px] max-sm:h-[50px]"></div>
+
+      {/* Explore More */}
       <Explore1 />
       <div className="flex justify-center">
-        <div className="w-[370px] h-[39px] text-white bg-black rounded-full flex justify-center items-center">
+        <div className="w-[370px] h-[39px] text-white bg-black rounded-full flex justify-center items-center max-sm:w-full max-sm:h-[36px]">
           Explore All Campaigns!
         </div>
       </div>
+
+      {/* Footer */}
       <div className="mt-6">
         <Footer />
       </div>

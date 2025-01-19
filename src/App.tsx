@@ -1,7 +1,7 @@
 import "./App.css";
 import Landingpage from "./component/Landingpage";
 import Navbar from "./component/Navbar";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Createcampaign from "./component/campaign/Createcampaign";
 import Createcampaign1 from "./component/campaign/Createcampaign1";
 import Activecampaign from "./component/campaign/Activecampaign";
@@ -9,6 +9,8 @@ import Activecampaign from "./component/campaign/Activecampaign";
 import CampaignInfo from "./component/campaign/CampaignInfo";
 
 import Creatordashboard from "./component/campaign/Creatordashboard";
+import { useAccount } from "@starknet-react/core";
+import { useEffect } from "react";
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -16,6 +18,15 @@ function App() {
   // Define routes where the Navbar should be visible (only on landing page)
   const showNavbarRoutes = ["/"];
   const shouldShowNavbar = showNavbarRoutes.includes(location.pathname);
+  const {isConnected} = useAccount()
+  const navigate = useNavigate()
+
+
+useEffect(() => {
+  if(!isConnected){
+    navigate("/")
+  }
+}, [location.pathname])
 
   return (
     <div className="relative ">

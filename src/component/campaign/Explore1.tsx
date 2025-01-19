@@ -16,7 +16,7 @@ const Explore1 = () => {
                   <span className="flex items-center gap-3">
                     <p className="text-white text-[16px] max-sm:text-[14px]">
                       <strong>Wallet Address</strong>
-                      <p className="max-w-[200px] truncate text-white">
+                      <p className="max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
                         0x1234567890abcdef1234567890ABCDEF12345678
                       </p>
                     </p>
@@ -49,7 +49,7 @@ const Explore1 = () => {
                   <span className="flex items-center gap-3">
                     <p className="text-white text-[16px] max-sm:text-[14px]">
                       <strong>Wallet Address</strong>
-                      <p className="max-w-[200px] truncate text-white">
+                      <p className="max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
                         0x9876543210FEDCBA9876543210fedcba98765432
                       </p>
                     </p>

@@ -2,17 +2,18 @@ import { useState } from "react";
 import Walletmodal from "./Walletmodal"; // Import the WalletModal component
 import frame from "../assets/Frame 19 (1).png";
 
-import img from "../assets/image1.png";
+// import img from "../assets/image1.png";
 import eli from "../assets/Frame 21.png";
 import down from "../assets/download 5 (1).png";
 import downs from "../assets/download 6 (1).png";
+import Connect from "./connect-modal";
 
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModalToggle = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  // const handleModalToggle = () => {
+  //   setIsModalOpen(!isModalOpen);
+  // };
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white relative overflow-hidden">
@@ -32,24 +33,17 @@ const Landingpage = () => {
           />
 
           <div className="flex flex-col items-center max-sm:space-y-4 max-sm:w-full">
-            <div className="w-[600px] h-[500px] border rounded-bl-[26px] border-black rounded-lg p-7 max-sm:w-full max-sm:h-auto max-sm:p-4 flex justify-center items-center">
-              <p className="text-black text-[32px] max-sm:text-[16px] text-center">
-                What if crowdfunding was fair, transparent, and truly
-                community-driven? HelpNet runs on Starknet, governed by a DAO no
-                gatekeepers, no hidden fees. Just real people
-                backing real causes. 
+            <div className="w-[600px] h-[500px] border rounded-bl-[26px] border-black rounded-lg p-7 max-sm:w-full max-sm:h-auto max-sm:p-4">
+              <p className="text-black text-[30px] max-sm:text-[16px]">
+                Imagine a world where every donation counts, and every dollar
+                makes a tangible difference. A world where transparency and
+                trust are the foundation of Humanitarian aid. Welcome to
+                HELPNET, a pioneering blockchain-based crowdfunding platform
+                that's changing the face of giving.
               </p>
             </div>
             <div className="flex justify-center mt-4 max-sm:w-full">
-              <button
-                onClick={handleModalToggle}
-                className="w-full max-w-xs h-[50px] flex gap-3 justify-center items-center bg-black rounded max-sm:py-2"
-              >
-                <p className="text-white text-lg max-sm:text-sm">
-                  Connect Wallet
-                </p>
-                <img src={img} alt="Icon" className="w-[20px] h-[20px]" />
-              </button>
+              <Connect/>
             </div>
           </div>
         </div>
