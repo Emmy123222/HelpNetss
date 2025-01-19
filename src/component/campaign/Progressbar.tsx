@@ -17,7 +17,7 @@ const Progressbar: React.FC<ProgressbarProps> = ({
     <div className="bg-[#9A92929C] text-white p-4 rounded-[24px] w-full ">
       {/* Top Row */}
       <div className="flex justify-between text-sm font-semibold">
-        <p>${raised.toFixed(2)} USD</p>
+        <p>${raised.toFixed(2)} STRK</p>
         <p>{supporters} Supporters</p>
       </div>
 

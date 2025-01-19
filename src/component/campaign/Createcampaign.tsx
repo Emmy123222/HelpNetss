@@ -14,27 +14,29 @@ const Createcampaign = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-black p-5 flex justify-between items-center  max-sm:gap-4 max-sm:overflow-x-hidden">
+      <div className="bg-black p-5 flex justify-between items-center w-full max-sm:gap-4 max-sm:p-3">
         <div className="flex gap-3 items-center max-sm:justify-center">
-          <img src={eli} alt="" className="w-[50px] max-sm:w-[40px]" />
-          <h1 className="font-medium text-[24px] max-sm:text-[20px]">
+          <img src={eli} alt="Logo" className="w-[50px] max-sm:w-[40px]" />
+          <h1 className="font-medium text-white text-[24px] max-sm:text-[20px]">
             HelpNet
           </h1>
         </div>
 
         {/* Desktop Menu */}
-        <div className="max-sm:hidden flex gap-4">
+        <div className=" max-sm:hidden flex gap-4">
           <button
-            className="bg-[#D9D9D98C] px-4 py-2 text-sm"
+            className="bg-[#D9D9D98C] px-4 py-2 text-sm text-white"
             onClick={() => navigate("/createcampaign1")}
           >
             Create Campaign
           </button>
-          <button className="bg-[#D9D9D98C] px-4 py-2 text-sm">Join DAO</button>
+          <button className="bg-[#D9D9D98C] text-white px-4 py-2 text-sm">
+            Join DAO
+          </button>
           <button
-            className="bg-[#D9D9D98C] px-4 py-2 text-sm"
+            className="bg-[#D9D9D98C] px-4 py-2 text-sm text-white"
             onClick={() => navigate("/creatordashboard")}
           >
             Creator Dashboard
@@ -76,18 +78,18 @@ const Createcampaign = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="max-sm:block bg-black w-full flex flex-col items-center gap-4 p-4  max-sm:space-y-3">
+        <div className="block max-sm:bg-black max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center max-sm:gap-4 max-sm:p-4">
           <button
-            className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full"
+            className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full text-white"
             onClick={() => navigate("/createcampaign1")}
           >
             Create Campaign
           </button>
-          <button className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full">
+          <button className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full text-white">
             Join DAO
           </button>
           <button
-            className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full"
+            className="bg-[#D9D9D98C] px-4 py-2 text-sm w-full text-white"
             onClick={() => navigate("/creatordashboard")}
           >
             Creator Dashboard
@@ -96,10 +98,10 @@ const Createcampaign = () => {
       )}
 
       {/* Content */}
-      <div className="p-5 space-y-4 max-sm:p-3 bg-white">
+      <div className="p-5 space-y-4 max-sm:p-3">
         <div className="flex gap-8 mt-5 max-sm:flex-col max-sm:gap-4 max-sm:items-center">
-          <img src={img} alt="" className="w-[800px] max-sm:w-full" />
-          <img src={imgs} alt="" className="w-[800px] max-sm:w-full" />
+          <img src={img} alt="Image 1" className="w-[800px] max-sm:w-full" />
+          <img src={imgs} alt="Image 2" className="w-[800px] max-sm:w-full" />
         </div>
         <div className="w-96 h-12 bg-gray-300 border border-gray-400 flex items-center rounded-[24px] p-4 max-sm:w-full">
           <input
@@ -112,7 +114,6 @@ const Createcampaign = () => {
 
       {/* Explore Component */}
       <Explore />
-      <div></div>
     </div>
   );
 };

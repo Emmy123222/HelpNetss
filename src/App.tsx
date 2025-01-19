@@ -18,7 +18,7 @@ function App() {
   const shouldShowNavbar = showNavbarRoutes.includes(location.pathname);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Conditionally render Navbar */}
       {shouldShowNavbar && <Navbar />}
 
