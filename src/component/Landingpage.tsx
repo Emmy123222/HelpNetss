@@ -16,16 +16,14 @@ const Landingpage = () => {
   // const handleModalToggle = () => {
   //   setIsModalOpen(!isModalOpen);
   // };
-  const {isConnected} = useAccount()
-  const navigate = useNavigate()
+  const { isConnected } = useAccount();
+  const navigate = useNavigate();
 
-
-useEffect(() => {
-  if(isConnected){
-    navigate("/createcampaign1")
-  }
-}, [location.pathname, isConnected])
-
+  useEffect(() => {
+    if (isConnected) {
+      navigate("/createcampaign");
+    }
+  }, [location.pathname, isConnected]);
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white relative overflow-hidden">
@@ -55,7 +53,7 @@ useEffect(() => {
               </p>
             </div>
             <div className="flex justify-center mt-4 max-sm:w-full">
-              <Connect/>
+              <Connect />
             </div>
           </div>
         </div>
