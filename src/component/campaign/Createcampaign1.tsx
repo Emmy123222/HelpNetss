@@ -86,7 +86,7 @@ const CreateCampaign1: React.FC = () => {
 
 
   return (
-    <div className="bg-white">
+    <div className="bg-white h-screen">
       {/* Header */}
       <div className="w-full h-[120px] bg-[#D9D9D9BA] flex justify-between items-center p-5  max-sm:h-auto max-sm:gap-4">
         <div className="flex gap-3 items-center justify-center">

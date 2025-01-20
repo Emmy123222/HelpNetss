@@ -100,8 +100,8 @@ const Createcampaign = () => {
       {/* Content */}
       <div className="p-5 space-y-4 max-sm:p-3">
         <div className="flex gap-8 mt-5 max-sm:flex-col max-sm:gap-4 max-sm:items-center">
-          <img src={img} alt="Image 1" className="w-[800px] max-sm:w-full" />
-          <img src={imgs} alt="Image 2" className="w-[800px] max-sm:w-full" />
+          <img src={img} alt="Image 1" className="w-full max-sm:w-full" />
+          <img src={imgs} alt="Image 2" className="w-full max-sm:w-full" />
         </div>
         <div className="w-96 h-12 bg-gray-300 border border-gray-400 flex items-center rounded-[24px] p-4 max-sm:w-full">
           <input
