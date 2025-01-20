@@ -141,7 +141,7 @@ const Creatordashboard: React.FC = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white h-screen">
       <div className="bg-[#D9D9D9BA] p-5 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="flex gap-3 items-center">
           <img src={eli} alt="" className="w-[40px] sm:w-[50px]" />
