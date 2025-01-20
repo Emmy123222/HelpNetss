@@ -6,17 +6,17 @@ import { useConnect, useDisconnect, useAccount, InjectedConnector } from "@stark
 // import { Card } from '@radix-ui/themes';
 // import { InjectedConnector } from "starknetkit/injected"
 import img from "../assets/image1.png";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 
 
 function Connect() {
 
   const { connect } = useConnect();
   const { disconnect } = useDisconnect();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const { account, address } = useAccount()
+  const { account } = useAccount()
 
 
   const connectWallet = async () => {
@@ -28,7 +28,7 @@ function Connect() {
 
     const { starknetkitConnectModal } = useStarknetkitConnectModal({
       connectors: connectors as any,
-      dappName: "ERC20 UI",
+      dappName: "HelpNet UI",
       modalTheme: "system"
 
     })
@@ -36,13 +36,7 @@ function Connect() {
     const { connector } = await starknetkitConnectModal()
     await connect({ connector } as any)
   }
-  console.log(address)
 
-  useEffect(() => {
-    if (address) {
-      navigate("/createcampaign")
-    }
-  }, [address])
 
 
   return (

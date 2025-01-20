@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Walletmodal from "./Walletmodal"; // Import the WalletModal component
 import frame from "../assets/Frame 19 (1).png";
 
@@ -7,6 +7,8 @@ import eli from "../assets/Frame 21.png";
 import down from "../assets/download 5 (1).png";
 import downs from "../assets/download 6 (1).png";
 import Connect from "./connect-modal";
+import { useAccount } from "@starknet-react/core";
+import { useNavigate } from "react-router-dom";
 
 const Landingpage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,6 +16,16 @@ const Landingpage = () => {
   // const handleModalToggle = () => {
   //   setIsModalOpen(!isModalOpen);
   // };
+  const {isConnected} = useAccount()
+  const navigate = useNavigate()
+
+
+useEffect(() => {
+  if(isConnected){
+    navigate("/createcampaign1")
+  }
+}, [location.pathname, isConnected])
+
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white relative overflow-hidden">

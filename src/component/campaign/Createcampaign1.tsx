@@ -1,51 +1,57 @@
 import { useState } from "react";
 import eli from "../../assets/Frame 21.png";
 import clock from "../../assets/clock.png";
-import contractABI from "../lib/abi";
+import contractABI from "../lib/abi"
 import Modal from "./Modal"; // Import the Modal component
-import { useAccount } from "@starknet-react/core";
-
-import "@wojtekmaj/react-datetimerange-picker/dist/DateTimeRangePicker.css";
-import "react-calendar/dist/Calendar.css";
-import "react-clock/dist/Clock.css";
+import { useAccount,  } from "@starknet-react/core";
+// import { Contract, } from "starknet"
+import '@wojtekmaj/react-datetimerange-picker/dist/DateTimeRangePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 // import Calendar from "react-calendar";
-import { DateTimeRangePicker } from "@wojtekmaj/react-datetimerange-picker";
-
+import { DateTimeRangePicker } from "@wojtekmaj/react-datetimerange-picker"
+// import Connect from "../connect-modal";
+// import { Data } from "framer/data/Data.js";
+import WalletBar from "../starknet/WalletBar";
+// const DECIMALS = 18;
 const CreateCampaign1: React.FC = () => {
   // const [isModalOpen, setIsModalOpen] = useState(false); // State to toggle the modal
   const [isModalOpen, setIsModalOpen] = useState(false); // State to toggle the modal
   // const [name, setName] = useState("");
   // const [description, setDescription] = useState("");
-
+  // const [initialAmount, setInitialAmount] = useState("");
+  // const [targetAmount, setTargetAmount] = useState("");
   const [isCalenderOpen, setIsCalenderOpen] = useState<boolean>(false);
   const [value, onChange] = useState(new Date());
-  const [] = useState<Date | undefined>(new Date());
+  // const [date, setDate] = useState<Date | undefined>(new Date())
+  // const WalletBar from '../components/WalletBar'
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
   const { account } = useAccount(); // User's connected wallet
   const [formData, setFormData] = useState({
-    start_balance: "",
-    name: "",
-    target: "",
-    deadline: "",
-    description: "",
+    start_balance: '',
+    name: '',
+    target: '',
+    deadline: '',
+    description: '',
   });
   const [transactionHash, setTransactionHash] = useState<string | null>(null);
 
   // Initialize the contract instance
   // const contract = new Contract(contractABI.abi, contractABI.address);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async () => {
     if (!account) {
-      alert("Please connect your wallet.");
+      alert('Please connect your wallet.');
       return;
     }
 
@@ -54,11 +60,11 @@ const CreateCampaign1: React.FC = () => {
     const datec = new Date(deadline); // Create a Date object
     const milliseconds = datec.getTime(); // Get the time in milliseconds
     const deadlineBigInt = BigInt(Math.floor(Number(milliseconds) / 1000)); // Convert timestamp to seconds and then to BigInt
-    console.log(deadlineBigInt);
+    console.log(deadlineBigInt)
     try {
       const txHash = await account.execute({
         contractAddress: contractABI.address,
-        entrypoint: "create_campaign",
+        entrypoint: 'create_campaign',
         calldata: [
           BigInt(start_balance), // Convert to BigInt
           name,
@@ -67,16 +73,17 @@ const CreateCampaign1: React.FC = () => {
           description,
         ],
       });
-
+  
       setTransactionHash(txHash.transaction_hash); // Assuming `transaction_hash` is returned
-      console.log("Transaction Hash:", txHash);
+      console.log('Transaction Hash:', txHash);
     } catch (error) {
-      console.error("Error invoking create_campaign:", error);
+      console.error('Error invoking create_campaign:', error);
     }
   };
 
-  // const newinitialAmount: Uint256 = cairo.uint256((initialAmount as any) * (10 ** DECIMALS))
-  // const newTargetAmount: Uint256 = cairo.uint256((targetAmount as any) * (10 ** DECIMALS))
+
+
+
 
   return (
     <div className="bg-white">
@@ -97,6 +104,7 @@ const CreateCampaign1: React.FC = () => {
           </p>
           <p className="text-black text-[20px] max-sm:text-[16px]">
             {/* <Connect/> */}
+            <WalletBar/>
           </p>
         </div>
       </div>
@@ -159,8 +167,7 @@ const CreateCampaign1: React.FC = () => {
               />
             </div>
           </div>
-          <div
-            className="w-[180px] rounded-[20px] h-[52px] bg-[#F5F5F5] border border-black flex items-center justify-center max-sm:w-full max-sm:h-10"
+          <div className="w-[180px] rounded-[20px] h-[52px] bg-[#F5F5F5] border border-black flex items-center justify-center max-sm:w-full max-sm:h-10"
             onClick={() => setIsCalenderOpen(isCalenderOpen)}
           >
             <img
@@ -169,18 +176,9 @@ const CreateCampaign1: React.FC = () => {
               className="w-[40px] max-sm:w-[30px]"
             />
             {/* <DateTimeRangePicker onChange={onChange} value={value} className={"bg-black"} /> */}
-            <input
-              type="date"
-              name="deadline"
-              id="date"
-              className="w-5  text-black"
-              onChange={handleChange}
-            />
+            <input type="date" name="deadline" id="date" className="w-5  text-black" onChange={handleChange} />
             {/* <Calendar onChange={onChange as any} value={value} /> */}
-            <label
-              htmlFor="date"
-              className="rounded-full bg-slate-400 w-[100px] h-[40px] flex items-center justify-center max-sm:w-[80px] max-sm:h-[30px] max-sm:text-sm"
-            >
+            <label htmlFor="date" className="rounded-full bg-slate-400 w-[100px] h-[40px] flex items-center justify-center max-sm:w-[80px] max-sm:h-[30px] max-sm:text-sm">
               Upcoming
             </label>
           </div>
@@ -198,9 +196,7 @@ const CreateCampaign1: React.FC = () => {
       </div>
       {transactionHash && <p>Transaction Hash: {transactionHash}</p>}
       {/* Render the Modal */}
-      {isCalenderOpen && (
-        <DateTimeRangePicker onChange={onChange as any} value={value} />
-      )}
+      {isCalenderOpen && <DateTimeRangePicker onChange={onChange as any} value={value} />}
       {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );

@@ -26,7 +26,7 @@ useEffect(() => {
   if(!isConnected){
     navigate("/")
   }
-}, [location.pathname])
+}, [location.pathname, isConnected])
 
   return (
     <div className="relative ">
